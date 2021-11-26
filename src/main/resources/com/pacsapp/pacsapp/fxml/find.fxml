@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pacsapp.pacsapp.controller.FindController">
+<children>
+    <Label fx:id="errorLabel" visible="false" text="ERROR" wrapText="true" GridPane.columnSpan="2">
+        <GridPane.margin>
+            <Insets left="30.0" />
+        </GridPane.margin>
+    </Label>
+    <ProgressIndicator fx:id="progressIndicator" visible="false" maxWidth="40.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowSpan="2">
+        <GridPane.margin>
+            <Insets right="30.0" />
+        </GridPane.margin>
+    </ProgressIndicator>
+    <Label text="KEYS - Patient Name" GridPane.rowIndex="1">
+        <GridPane.margin>
+            <Insets left="30.0" />
+        </GridPane.margin>
+    </Label>
+    <TextField fx:id="patientNameText" prefHeight="50.0" promptText="e.g. Doe^John" GridPane.columnSpan="2" GridPane.rowIndex="2">
+        <GridPane.margin>
+            <Insets left="30.0" right="30.0" />
+        </GridPane.margin>
+    </TextField>
+    <Label text="KEYS - Patient ID" GridPane.rowIndex="3">
+        <GridPane.margin>
+            <Insets left="30.0" />
+        </GridPane.margin>
+    </Label>
+    <TextField fx:id="patientIdText" prefHeight="50.0" promptText="e.g. 111111111" GridPane.columnSpan="2" GridPane.rowIndex="4">
+        <GridPane.margin>
+            <Insets left="30.0" right="30.0" />
+        </GridPane.margin>
+    </TextField>
+    <Label text="KEYS - Patient Birth Date" GridPane.rowIndex="5">
+        <GridPane.margin>
+            <Insets left="30.0" />
+        </GridPane.margin>
+    </Label>
+    <TextField fx:id="birthDateText" prefHeight="50.0" promptText="e.g. 19000101, use 19000101- to indicate from date" GridPane.columnSpan="2" GridPane.rowIndex="6">
+        <GridPane.margin>
+            <Insets left="30.0" right="30.0" />
+        </GridPane.margin>
+    </TextField>
+    <Label text="KEYS - Study Date" GridPane.rowIndex="7">
+        <GridPane.margin>
+            <Insets left="30.0" />
+        </GridPane.margin>
+    </Label>
+    <TextField fx:id="studyDateText" prefHeight="50.0" promptText="e.g. 20000101, use 20000101- to indicate from date" GridPane.columnSpan="2" GridPane.rowIndex="8">
+        <GridPane.margin>
+            <Insets left="30.0" right="30.0" />
+        </GridPane.margin>
+    </TextField>
+    <HBox alignment="CENTER" spacing="40" GridPane.columnSpan="2" GridPane.rowIndex="9">
+        <children>
+            <Label prefWidth="100" text="Retrieve level" />
+            <Label prefWidth="200" text="KEYS - Modalities in Study" />
+        </children>
+    </HBox>
+    <HBox alignment="CENTER" spacing="40" GridPane.columnSpan="2" GridPane.rowIndex="10">
+        <children>
+            <ChoiceBox fx:id="retrieveLevelBox" prefHeight="50.0" prefWidth="100" />
+            <ComboBox fx:id="modalityBox" prefHeight="50.0" prefWidth="200" />
+        </children>
+    </HBox>
+
+    <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancel" prefHeight="50.0" prefWidth="260.0" text="CANCEL" GridPane.halignment="RIGHT" GridPane.rowIndex="12">
+        <GridPane.margin>
+            <Insets right="5.0" top="10.0" />
+        </GridPane.margin>
+    </Button>
+    <Button fx:id="findButton" mnemonicParsing="false" onAction="#find" prefHeight="50.0" prefWidth="260.0" text="FIND" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12">
+        <GridPane.margin>
+            <Insets left="5.0" top="10.0" />
+        </GridPane.margin>
+    </Button>
+</children>
+<rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="50.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="50.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="50.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="50.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="50.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="60.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+</rowConstraints>
+<columnConstraints>
+    <ColumnConstraints maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+    <ColumnConstraints maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+</columnConstraints>
+</GridPane>

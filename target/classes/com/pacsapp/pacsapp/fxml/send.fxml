@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pacsapp.pacsapp.controller.SendController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="sendButton" mnemonicParsing="false" onAction="#send" prefHeight="50.0" prefWidth="260.0" text="SEND" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="5.0" right="30.0" top="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancel" prefHeight="50.0" prefWidth="260.0" text="CANCEL" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="30.0" right="5.0" top="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Label text="FILE PATH:" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="30.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="fileField" prefHeight="50.0" prefWidth="300.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="30.0" right="85.0" />
+         </GridPane.margin>
+      </TextField>
+      <Button fx:id="browseButton" mnemonicParsing="false" onAction="#browse" prefHeight="50.0" text="Browse" GridPane.columnSpan="2147483647" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="10.0" right="30.0" />
+         </GridPane.margin>
+      </Button>
+      <Label fx:id="rspLabel" text="ERROR" visible="false" GridPane.columnSpan="2147483647">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="30.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </Label>
+      <ProgressIndicator fx:id="progressIndicator" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets right="30.0" />
+         </GridPane.margin>
+      </ProgressIndicator>
+   </children>
+</GridPane>
